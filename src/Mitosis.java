@@ -1,3 +1,5 @@
+//This code is replicating Mitosis
+//Uses an Animal to do so
 import java.util.Random;
 
 public class Mitosis {
@@ -72,17 +74,29 @@ public class Mitosis {
         return alleles;
     }
 
-    public static void main(String[] args) {
-        int number = 6;
+    /*public static void main(String[] args) {
+        int number = 4;
         int[] array = new int[number];
         for (int i = 0; i < number; i++) {
             array[i] = i+1;
         }
-        Animal test = new Animal(number, array, "Dog", false);
-        System.out.println(test.getAnimalChromosomeGeneAllelesString());
+        Animal test = new Animal(number, array, "Dog");
+        System.out.println(test.getAnimalBreed());
+        //System.out.println(test.getAnimalChromosomeGeneAllelesString());
 
-        Mitosis m = new Mitosis(test);
-        System.out.println(m.getMitosisAllelesPassedString());
-    }
+        String[][] alleles = {
+                {"Aa"},
+                {"Aa", "Bb"},
+                {"Aa", "Bb", "Cc"},
+                {"XY", "Aa", "Bb", "Cc"}
+        };
 
+        Animal t = new Animal(number, array, "Dog", alleles);
+        System.out.println(t.getAnimalChromosomeGeneAllelesString());
+        System.out.println(t.getAnimalBreed());
+        for (int i = 0; i < 5; i++) {
+            Mitosis m = new Mitosis(t);
+            System.out.println(m.getMitosisAllelesPassedString());
+        }
+    }*/
 }

@@ -1,3 +1,4 @@
+//This code creates a Sex Chromosome
 import java.util.Random;
 
 public class SexChromosome {
