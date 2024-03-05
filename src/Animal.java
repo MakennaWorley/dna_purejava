@@ -17,7 +17,7 @@ public class Animal {
         String[][] animalGeneAlleleComplete = new String[chromosomeNumber][];
         for (int i = 0; i < chromosomeNumber-1; i++) {
             int index = geneNumber[i];
-            Chromosome chromo = new Chromosome(index+1);
+            Chromosome chromo = new Chromosome(index);
             animalGeneAlleleComplete[i] = chromo.getChromosomeAlleles();
         }
         int gene = geneNumber[chromosomeNumber-1];
@@ -39,7 +39,7 @@ public class Animal {
             this.animalGeneAlleles = chromosomeGene;
         } else {
             System.out.println("Invalid, error in code");
-            int[] gene = geneNumber.clone();
+            /*int[] gene = geneNumber.clone();
             geneNumber[chromosomeNumber-1] = geneNumber[chromosomeNumber-1] + 1; //updates geneNumber
 
             SexChromosome sex = new SexChromosome(1); //get sex Alleles
@@ -59,14 +59,14 @@ public class Animal {
             for (int i = geneNumber[chromosomeNumber-1]-1; i > 0; i--) {
                 clone[chromosomeNumber-1][i] = clone[chromosomeNumber-1][i-1];
             }
-            clone[chromosomeNumber-1][0] = sexAllele;
+            clone[chromosomeNumber-1][0] = sexAllele;*/
 
 
             this.animalNumberOfChromosomes = chromosomeNumber;
             this.animalNumberOfGenes = geneNumber;
             this.animalNameOfAnimal = animal;
-            //this.animalGeneAlleles = chromosomeGene;
-            this.animalGeneAlleles = clone;
+            this.animalGeneAlleles = chromosomeGene;
+            //this.animalGeneAlleles = clone;
             this.animalBreed = breed;
         }
 
@@ -83,11 +83,15 @@ public class Animal {
         String alleles = "";
         for (int i = 0; i < this.animalGeneAlleles.length; i++) {
             for (int j = 0; j < this.animalGeneAlleles[i].length; j++) {
-                alleles = alleles + this.animalGeneAlleles[i][j] + " ";
+                alleles = alleles + /*Integer.toString(i) + Integer.toString(j) +*/ this.animalGeneAlleles[i][j] + " "; //----------------------------------
             }
             alleles = alleles + "\n";
         }
         return alleles;
+    }
+
+    public String getAnimalChromosomeGeneSingleString(int i, int j) {
+        return this.animalGeneAlleles[i][j];
     }
 
     public boolean getAnimalBreed() { return this.animalBreed; }
@@ -98,18 +102,18 @@ public class Animal {
     }
 
     public int getAnimalGeneNumber(int i) {
-        return this.animalNumberOfGenes[i];
+        return this.animalGeneAlleles[i].length;
     }
 
     /*public static void main(String[] args) {
         int number = 6;
         int[] array = new int[number];
         for (int i = 0; i < number; i++) {
-            array[i] = i;
+            array[i] = i+1;
         }
         Animal test = new Animal(number, array, "Dog", false);
         System.out.println(test.getAnimalChromosomeGeneAllelesString());
-        System.out.println(test.getAnimalSex());
+        //System.out.println(test.getAnimalGeneNumber(1));
         System.out.println("------");
 
         int[]a = new int[6];
