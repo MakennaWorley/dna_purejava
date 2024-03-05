@@ -1,3 +1,4 @@
+//This code creates a Chromosome
 import java.util.Random;
 
 public class Chromosome {
