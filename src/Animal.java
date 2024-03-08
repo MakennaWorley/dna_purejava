@@ -3,7 +3,7 @@
 import java.util.Arrays;
 
 public class Animal {
-    // Attributes
+    // Attributes of Animal
     private boolean animalBreed;
     private int animalNumberOfChromosomes;
     private int[] animalNumberOfGenes;
@@ -11,7 +11,7 @@ public class Animal {
     private String[][] animalGeneAlleles;
 
     // Constructors
-    // default for generating random genes
+    // default for generating an animal with random genes
     public Animal(int chromosomeNumber, int[] geneNumber, String animal) {
         if (geneNumber.length != chromosomeNumber) {
             System.out.println("Invalid, error in code");
@@ -32,7 +32,7 @@ public class Animal {
         this.animalBreed = false;
     }
 
-    // for specific animal
+    // generating an animal with specific genes
     public Animal(int chromosomeNumber,int[] geneNumber, String animal, String[][] chromosomeGene) {
         if (chromosomeGene[chromosomeNumber-1][0].equals("XY")|| chromosomeGene[chromosomeNumber-1][0].equals("XX")) {
             this.animalNumberOfChromosomes = chromosomeNumber;
@@ -75,13 +75,25 @@ public class Animal {
 
     }
 
-    // Accessor Methods
+    // Accessor Methods listed by return type
+    public boolean getAnimalBreed() { return this.animalBreed; }
     public int getAnimalNumberOfChromosomes() { return this.animalNumberOfChromosomes; }
+
+    public int getAnimalGeneNumber(int i) {
+        return this.animalGeneAlleles[i].length;
+    }
 
     public String getAnimalName() { return this.animalNameOfAnimal; }
 
+    public String getAnimalChromosomeGeneSingleString(int i, int j) {
+        return this.animalGeneAlleles[i][j];
+    }
+
+    public int[] getAnimalNumberOfGenes() { return this.animalNumberOfGenes; }
+
     public String[][] getAnimalGeneAlleles() { return this.animalGeneAlleles; }
 
+    // Accessor Method returning strings from non-string objects
     public String getAnimalChromosomeGeneAllelesString() {
         String alleles = "";
         for (int i = 0; i < this.animalGeneAlleles.length; i++) {
@@ -93,21 +105,9 @@ public class Animal {
         return alleles;
     }
 
-    public String getAnimalChromosomeGeneSingleString(int i, int j) {
-        return this.animalGeneAlleles[i][j];
-    }
-
-    public boolean getAnimalBreed() { return this.animalBreed; }
-
-    public int[] getAnimalNumberOfGenes() { return this.animalNumberOfGenes; }
-
     public String getAnimalSex() {
         int i = this.animalGeneAlleles.length;
         return this.animalGeneAlleles[i-1][0];
-    }
-
-    public int getAnimalGeneNumber(int i) {
-        return this.animalGeneAlleles[i].length;
     }
 
     /*public static void main(String[] args) {

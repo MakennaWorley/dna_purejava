@@ -3,13 +3,8 @@
 //This code is replicating Fertilization
 //Uses an Animal and Mitosis to do so
 public class Fertilization {
-    // Attributes
+    // Attributes of Fertilization
     private String[][] fertilizationAllelesPassed;
-
-    /*// Attributes from animal
-    private boolean animalBreed;
-    private int animalNumberOfChromosomes;
-    private int[] animalNumberOfGenes;*/
 
     // Constructor
     public Fertilization(Animal parent, Mitosis parent1, Mitosis parent2) {
@@ -20,7 +15,7 @@ public class Fertilization {
         this.fertilizationAllelesPassed = alleles;
     }
 
-    // helper methods
+    // Helper Methods for the Constructor
     public String[][] createChromosomes(Mitosis p1, Mitosis p2) {
         String[][] alleles = p1.getMitosisAllelesPassed().clone();
         for (int i = 0; i < p1.getMitosisAllelesPassed().length; i++) {
@@ -31,11 +26,13 @@ public class Fertilization {
         return alleles;
     }
 
+    // method that creates the offspring of the pairing
+    // needs to be moved
     public Animal createAnimal(int chromosomeNumber, int[] geneNumber, String animal, String[][] chromosomeGene) {
         return new Animal(chromosomeNumber, geneNumber, animal, chromosomeGene);
     }
 
-    // Accessor Methods
+    // Accessor Methods listed by return type
     public String[][] getFertilizationAllelesPassed() { return this.fertilizationAllelesPassed; }
 
     /*public static void main(String[] args) {
