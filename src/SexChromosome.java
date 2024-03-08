@@ -20,7 +20,22 @@ public class SexChromosome {
         this.chromosomeAlleles = chromosomeBank;
     }
 
-    // generating a chromosome with specific genes
+    // generating a sex chromosome with specific sex
+    public SexChromosome(int number, String sex) {
+        String [] alleles = new String[number];
+        if (sex.equals("XX")) {
+            alleles[0] = "XX";
+        } else {
+            alleles[0] = "XY";
+        }
+        for (int i = 1; i < number; i++) {
+            alleles[i] = chromosomeRandomizeAlleles(i);
+        }
+        this.chromosomeNumberOfGenes = number;
+        this.chromosomeAlleles = alleles;
+    }
+
+    // generating a sex chromosome with specific genes
     public SexChromosome(int number, String[] alleles) {
         if (alleles[0].equals("XY") || alleles[0].equals("XX")) {
             this.chromosomeNumberOfGenes = number;
@@ -31,7 +46,6 @@ public class SexChromosome {
             this.chromosomeNumberOfGenes = number;
             this.chromosomeAlleles = alleles;
         }
-
     }
 
     // Helper Methods for the Constructors

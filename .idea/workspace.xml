@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Fertilization works, does not check sex of parents">
-      <change afterPath="$PROJECT_DIR$/src/Breed.java" afterDir="false" />
+    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Updated Comments on Code and started work on Breed.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dna.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dna.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fertilization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fertilization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mitosis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mitosis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Breed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Breed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SexChromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SexChromosome.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,29 +44,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Animal.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Chromosome.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Fertilization.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Mitosis.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SexChromosome.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Breed&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/janiceworley/Library/CloudStorage/OneDrive-Personal/Documents/dna/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Animal.executor": "Run",
+    "Application.Breed.executor": "Run",
+    "Application.Chromosome.executor": "Run",
+    "Application.Fertilization.executor": "Run",
+    "Application.Mitosis.executor": "Run",
+    "Application.SexChromosome.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Breed",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/janiceworley/Library/CloudStorage/OneDrive-Personal/Documents/dna/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -93,7 +90,7 @@
       <workItem from="1709681035449" duration="233000" />
       <workItem from="1709757861078" duration="144000" />
       <workItem from="1709836949960" duration="540000" />
-      <workItem from="1709920536691" duration="2553000" />
+      <workItem from="1709920536691" duration="5231000" />
     </task>
     <task id="LOCAL-00001" summary="Fertilization works, does not check sex of parents">
       <option name="closed" value="true" />
@@ -103,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709680041584</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated Comments on Code and started work on Breed.java">
+      <option name="closed" value="true" />
+      <created>1709923165896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709923165896</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +116,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fertilization works, does not check sex of parents" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fertilization works, does not check sex of parents" />
+    <MESSAGE value="Updated Comments on Code and started work on Breed.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Comments on Code and started work on Breed.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -120,10 +126,6 @@
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Animal.java</url>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

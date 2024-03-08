@@ -32,6 +32,26 @@ public class Animal {
         this.animalBreed = false;
     }
 
+    public Animal(int chromosomeNumber, int[] geneNumber, String animal, String sex) {
+        if (geneNumber.length != chromosomeNumber) {
+            System.out.println("Invalid, error in code");
+        }
+        String[][] animalGeneAlleleComplete = new String[chromosomeNumber][];
+        for (int i = 0; i < chromosomeNumber-1; i++) {
+            int index = geneNumber[i];
+            Chromosome chromo = new Chromosome(index);
+            animalGeneAlleleComplete[i] = chromo.getChromosomeAlleles();
+        }
+        int gene = geneNumber[chromosomeNumber-1];
+        SexChromosome sexChromo = new SexChromosome(gene, sex);
+        animalGeneAlleleComplete[chromosomeNumber-1] = sexChromo.getChromosomeAlleles();
+        this.animalNumberOfChromosomes = chromosomeNumber;
+        this.animalNumberOfGenes = geneNumber;
+        this.animalNameOfAnimal = animal;
+        this.animalGeneAlleles = animalGeneAlleleComplete;
+        this.animalBreed = false;
+    }
+
     // generating an animal with specific genes
     public Animal(int chromosomeNumber,int[] geneNumber, String animal, String[][] chromosomeGene) {
         if (chromosomeGene[chromosomeNumber-1][0].equals("XY")|| chromosomeGene[chromosomeNumber-1][0].equals("XX")) {
