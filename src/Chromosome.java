@@ -9,7 +9,7 @@ public class Chromosome {
     private int oddsOfRecessiveGeneDefault = 50; //must be atleast 6 to work
 
     // Constructors
-    // default for generating random genes, most likely to be DominateDominate
+    // default for generating a chromosome with random genes, most likely to be DominateDominate
     public Chromosome(int number) {
         int i = 0;
         String[] chromosomeBank = new String[number];
@@ -21,13 +21,14 @@ public class Chromosome {
         this.chromosomeAlleles = chromosomeBank;
     }
 
-    // for specific genotype
+    // generating a chromosome with specific genes
     public Chromosome(int number, String[] alleles) {
         this.chromosomeNumberOfGenes = number;
         this.chromosomeAlleles = alleles;
     }
 
-    // helper method for default constructor
+    // Helper Methods for the Constructors
+    // creates the randomized genes
     private String chromosomeRandomizeAlleles(int number) {
         String letter = chromosomeGenerateAlleleLetter(number);
         int combo = chromosomeAlleleCode(oddsOfRecessiveGeneDefault);
@@ -49,13 +50,13 @@ public class Chromosome {
         return alleleCombo;
     }
 
-    // helper methods for chromosomeRandomizeAlleles
+    // calculates the chance of getting a random recessive gene
     private int chromosomeAlleleCode(int numberOfSides) {
         Random r = new Random();
         return r.nextInt(numberOfSides) + 1;
     }
 
-    // helper method to generate Allele letter
+    // generates the Allele letter
     private String chromosomeGenerateAlleleLetter(int letterIndex) {
         if (letterIndex < 0 || letterIndex > 26) {
             System.out.println("Invalid, error in code");
@@ -66,13 +67,14 @@ public class Chromosome {
         }
     }
 
-    // Accessor Methods
+    // Accessor Methods listed by return type
     public int getChromosomeNumberOfGenes() { return this.chromosomeNumberOfGenes; }
 
     public String[] getChromosomeAlleles() {
         return this.chromosomeAlleles;
     }
 
+    // Accessor Method returning strings from non-string objects
     public String getChromosomeAllelesString() {
         String alleles = "";
         for (int j = 0; j < this.chromosomeAlleles.length; j++) {

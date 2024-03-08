@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Fertilization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mitosis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mitosis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SexChromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SexChromosome.java" afterDir="false" />
+    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="New methods for assigning sex for SexChromosome and Animal">
+      <change beforePath="$PROJECT_DIR$/src/Breed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Breed.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Fertilization" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -44,13 +44,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Animal.executor": "Run",
+    "Application.Breed.executor": "Run",
     "Application.Chromosome.executor": "Run",
     "Application.Fertilization.executor": "Run",
     "Application.Mitosis.executor": "Run",
     "Application.SexChromosome.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Fertilization",
+    "git-widget-placeholder": "Breed",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,13 +59,16 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/janiceworley/Library/CloudStorage/OneDrive-Personal/Documents/dna/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -79,12 +83,47 @@
       <workItem from="1709596189666" duration="178000" />
       <workItem from="1709660881221" duration="1937000" />
       <workItem from="1709668858627" duration="1604000" />
-      <workItem from="1709671487982" duration="2852000" />
+      <workItem from="1709671487982" duration="3178000" />
+      <workItem from="1709681035449" duration="233000" />
+      <workItem from="1709757861078" duration="144000" />
+      <workItem from="1709836949960" duration="540000" />
+      <workItem from="1709920536691" duration="5539000" />
     </task>
+    <task id="LOCAL-00001" summary="Fertilization works, does not check sex of parents">
+      <option name="closed" value="true" />
+      <created>1709680041584</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709680041584</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updated Comments on Code and started work on Breed.java">
+      <option name="closed" value="true" />
+      <created>1709923165896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709923165896</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New methods for assigning sex for SexChromosome and Animal">
+      <option name="closed" value="true" />
+      <created>1709927502512</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709927502512</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fertilization works, does not check sex of parents" />
+    <MESSAGE value="Updated Comments on Code and started work on Breed.java" />
+    <MESSAGE value="New methods for assigning sex for SexChromosome and Animal" />
+    <option name="LAST_COMMIT_MESSAGE" value="New methods for assigning sex for SexChromosome and Animal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,14 +2,14 @@
 import java.util.Random;
 
 public class SexChromosome {
-    // Attributes of Chromosome
+    // Attributes of Sex Chromosome
     private int chromosomeNumberOfGenes;
     private String[] chromosomeAlleles;
 
     private int oddsOfRecessiveGeneDefault = 50; //must be atleast 6 to work
 
     // Constructors
-    // default for generating random genes, most likely to be DominateDominate
+    // default for generating a chromosome with random genes, most likely to be DominateDominate
     public SexChromosome(int number) {
         String[] chromosomeBank = new String[number];
         chromosomeBank[0] = chromosomeRandomizeSex();
@@ -20,7 +20,22 @@ public class SexChromosome {
         this.chromosomeAlleles = chromosomeBank;
     }
 
-    // for specific genotype
+    // generating a sex chromosome with specific sex
+    public SexChromosome(int number, String sex) {
+        String [] alleles = new String[number];
+        if (sex.equals("XX")) {
+            alleles[0] = "XX";
+        } else {
+            alleles[0] = "XY";
+        }
+        for (int i = 1; i < number; i++) {
+            alleles[i] = chromosomeRandomizeAlleles(i);
+        }
+        this.chromosomeNumberOfGenes = number;
+        this.chromosomeAlleles = alleles;
+    }
+
+    // generating a sex chromosome with specific genes
     public SexChromosome(int number, String[] alleles) {
         if (alleles[0].equals("XY") || alleles[0].equals("XX")) {
             this.chromosomeNumberOfGenes = number;
@@ -31,10 +46,10 @@ public class SexChromosome {
             this.chromosomeNumberOfGenes = number;
             this.chromosomeAlleles = alleles;
         }
-
     }
 
-    // helper method for default constructor
+    // Helper Methods for the Constructors
+    // creates the randomized genes
     private String chromosomeRandomizeAlleles(int number) {
         String letter = chromosomeGenerateAlleleLetter(number);
         int combo = chromosomeAlleleCode(oddsOfRecessiveGeneDefault);
@@ -56,13 +71,13 @@ public class SexChromosome {
         return alleleCombo;
     }
 
-    // helper methods for chromosomeRandomizeAlleles
+    // calculates the chance of getting a random recessive gene
     private int chromosomeAlleleCode(int numberOfSides) {
         Random r = new Random();
         return r.nextInt(numberOfSides) + 1;
     }
 
-    // helper method to generate Allele letter
+    // generates the Allele letter
     private String chromosomeGenerateAlleleLetter(int letterIndex) {
         if (letterIndex < 0 || letterIndex > 26) {
             System.out.println("Invalid, error in code");
@@ -73,7 +88,7 @@ public class SexChromosome {
         }
     }
 
-    // helper method for default constructor, gender
+    // generates the sex of the chromosome
     private String chromosomeRandomizeSex() {
         Random r = new Random();
         if (r.nextBoolean()) {
@@ -83,13 +98,14 @@ public class SexChromosome {
         }
     }
 
-    // Accessor Methods
+    // Accessor Methods listed by return type
     public int getChromosomeNumberOfGenes() { return this.chromosomeNumberOfGenes; }
 
     public String[] getChromosomeAlleles() {
         return this.chromosomeAlleles;
     }
 
+    // Accessor Methods returning strings from non-string objects
     public String getChromosomeAllelesString() {
         String alleles = "";
         for (int j = 0; j < this.chromosomeAlleles.length; j++) {

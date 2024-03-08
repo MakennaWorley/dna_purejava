@@ -3,7 +3,7 @@
 import java.util.Random;
 
 public class Mitosis {
-    // Attributes
+    // Attributes of Mitosis
     private String[][] mitosisAllelesPassed;
 
     // Constructor
@@ -11,8 +11,9 @@ public class Mitosis {
         this.mitosisAllelesPassed = generateAlleles(parent);
     }
 
-    // helper method for constructor
-    private String[][] generateAlleles(Animal p) { //this has an error
+    // Helper Methods for the Constructor
+    // of the two genes a parent chromosome has, only one will be passed down
+    private String[][] generateAlleles(Animal p) {
         String[][] alleles = new String[p.getAnimalNumberOfChromosomes()][];
         for (int i = 0; i < p.getAnimalNumberOfChromosomes(); i++) {
             alleles[i] = new String[p.getAnimalGeneNumber(i)];
@@ -42,6 +43,7 @@ public class Mitosis {
         return alleles;
     }
 
+    // chooses to grab either the first or second gene from parent chromosome
     private char passedAllelesNormal(String combo) {
         Random r = new Random();
         boolean first = r.nextBoolean();
@@ -51,6 +53,7 @@ public class Mitosis {
         return combo.charAt(1);
     }
 
+    // chooses to grab either always grab the first or second gene from parent sex chromosome
     private int passedAllelesSex() {
         Random r = new Random();
         boolean first = r.nextBoolean();
@@ -60,9 +63,10 @@ public class Mitosis {
         return 1;
     }
 
-    // Accessor Method
+    // Accessor Method listed by return type
     public String[][] getMitosisAllelesPassed() { return this.mitosisAllelesPassed; }
 
+    // Accessor Method returning strings from non-string objects
     public String getMitosisAllelesPassedString() {
         String alleles = "";
         for (int i = 0; i < this.mitosisAllelesPassed.length; i++) {
