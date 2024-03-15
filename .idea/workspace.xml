@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="New methods for assigning sex for SexChromosome and Animal">
+    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Reduced number of new variables created in Mitosis">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Breed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Breed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fertilization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fertilization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +24,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Fertilization" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MakennaWorley"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f5b032d2-b910-4207-b224-760040bdfa1f" />
+        <option name="url" value="https://github.com/MakennaWorley/dna_purejava.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,8 +67,9 @@
     "Application.SexChromosome.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Breed",
+    "git-widget-placeholder": "Clean-Up",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/makennaworley/Library/CloudStorage/OneDrive-Personal/Documents/dna",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +80,11 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -88,6 +110,10 @@
       <workItem from="1709757861078" duration="144000" />
       <workItem from="1709836949960" duration="540000" />
       <workItem from="1709920536691" duration="5539000" />
+      <workItem from="1710107079114" duration="238000" />
+      <workItem from="1710346811148" duration="50000" />
+      <workItem from="1710362540456" duration="79000" />
+      <workItem from="1710522220282" duration="2741000" />
     </task>
     <task id="LOCAL-00001" summary="Fertilization works, does not check sex of parents">
       <option name="closed" value="true" />
@@ -113,7 +139,39 @@
       <option name="project" value="LOCAL" />
       <updated>1709927502512</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Reduced number of new variables created in Chromosome">
+      <option name="closed" value="true" />
+      <created>1710522919021</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710522919021</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome">
+      <option name="closed" value="true" />
+      <created>1710523378020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710523378020</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested">
+      <option name="closed" value="true" />
+      <created>1710524106234</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710524106234</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Reduced number of new variables created in Mitosis">
+      <option name="closed" value="true" />
+      <created>1710524665837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710524665837</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +181,11 @@
     <MESSAGE value="Fertilization works, does not check sex of parents" />
     <MESSAGE value="Updated Comments on Code and started work on Breed.java" />
     <MESSAGE value="New methods for assigning sex for SexChromosome and Animal" />
-    <option name="LAST_COMMIT_MESSAGE" value="New methods for assigning sex for SexChromosome and Animal" />
+    <MESSAGE value="Reduced number of new variables created in Chromosome" />
+    <MESSAGE value="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome" />
+    <MESSAGE value="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested" />
+    <MESSAGE value="Reduced number of new variables created in Mitosis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduced number of new variables created in Mitosis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -17,29 +17,18 @@ public class Mitosis {
         String[][] alleles = new String[p.getAnimalNumberOfChromosomes()][];
         for (int i = 0; i < p.getAnimalNumberOfChromosomes(); i++) {
             alleles[i] = new String[p.getAnimalGeneNumber(i)];
-            //System.out.println(Integer.toString(i) + ": " + p.getAnimalGeneNumber(i));
         }
-        //System.out.println();
 
-        String alleleOfGene = "";
-        char gene;
         for (int i = 0; i < p.getAnimalNumberOfChromosomes()-1; i++) { //everything but the sex chromosome
             for (int j = 0; j < p.getAnimalGeneNumber(i); j++) {
-                //System.out.print(Integer.toString(i) + Integer.toString(j) + " ");
-                alleleOfGene = p.getAnimalChromosomeGeneSingleString(i, j);
-                gene = passedAllelesNormal(alleleOfGene);
-                alleles[i][j] = Character.toString(gene);
+                alleles[i][j] = Character.toString(passedAllelesNormal(p.getAnimalChromosomeGeneSingleString(i, j)));
             }
-            //System.out.print("\n");
         }
 
-        int sexChromosomePass = passedAllelesSex();
         for (int i = 0; i < p.getAnimalGeneNumber(p.getAnimalNumberOfChromosomes()-1); i++) {
-            String allele = p.getAnimalChromosomeGeneSingleString(p.getAnimalNumberOfChromosomes()-1,i);
-            char a = allele.charAt(sexChromosomePass);
-            alleles[p.getAnimalNumberOfChromosomes()-1][i] = Character.toString(a);
+            alleles[p.getAnimalNumberOfChromosomes()-1][i] =
+                    Character.toString((p.getAnimalChromosomeGeneSingleString(p.getAnimalNumberOfChromosomes()-1,i)).charAt(passedAllelesSex()));
         }
-
         return alleles;
     }
 
@@ -71,7 +60,7 @@ public class Mitosis {
         String alleles = "";
         for (int i = 0; i < this.mitosisAllelesPassed.length; i++) {
             for (int j = 0; j < this.mitosisAllelesPassed[i].length; j++) {
-                alleles = alleles + /*Integer.toString(i) + Integer.toString(j) +*/ this.mitosisAllelesPassed[i][j] + " ";
+                alleles = alleles + this.mitosisAllelesPassed[i][j] + " ";
             }
             alleles = alleles + "\n";
         }

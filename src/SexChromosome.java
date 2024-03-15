@@ -3,7 +3,6 @@ import java.util.Random;
 
 public class SexChromosome {
     // Attributes of Sex Chromosome
-    private int chromosomeNumberOfGenes;
     private String[] chromosomeAlleles;
 
     private int oddsOfRecessiveGeneDefault = 50; //must be atleast 6 to work
@@ -16,7 +15,6 @@ public class SexChromosome {
         for (int i = 1; i < number; i++) {
             chromosomeBank[i] = chromosomeRandomizeAlleles(i);
         }
-        this.chromosomeNumberOfGenes = number;
         this.chromosomeAlleles = chromosomeBank;
     }
 
@@ -31,19 +29,16 @@ public class SexChromosome {
         for (int i = 1; i < number; i++) {
             alleles[i] = chromosomeRandomizeAlleles(i);
         }
-        this.chromosomeNumberOfGenes = number;
         this.chromosomeAlleles = alleles;
     }
 
     // generating a sex chromosome with specific genes
-    public SexChromosome(int number, String[] alleles) {
+    public SexChromosome(String[] alleles) {
         if (alleles[0].equals("XY") || alleles[0].equals("XX")) {
-            this.chromosomeNumberOfGenes = number;
             this.chromosomeAlleles = alleles;
         } else {
             System.out.println("Invalid, error in code");
             alleles[0] = chromosomeRandomizeSex();
-            this.chromosomeNumberOfGenes = number;
             this.chromosomeAlleles = alleles;
         }
     }
@@ -51,22 +46,18 @@ public class SexChromosome {
     // Helper Methods for the Constructors
     // creates the randomized genes
     private String chromosomeRandomizeAlleles(int number) {
-        String letter = chromosomeGenerateAlleleLetter(number);
-        int combo = chromosomeAlleleCode(oddsOfRecessiveGeneDefault);
         String alleleCombo;
-        if (combo < 6) {
-            alleleCombo = letter.toLowerCase();
+        if (chromosomeAlleleCode(oddsOfRecessiveGeneDefault) < 6) {
+            alleleCombo = chromosomeGenerateAlleleLetter(number).toLowerCase();
         } else {
-            alleleCombo = letter;
+            alleleCombo = chromosomeGenerateAlleleLetter(number);
         }
         // for second allele
-        combo = chromosomeAlleleCode(oddsOfRecessiveGeneDefault);
-        if (combo < 6) {
-            alleleCombo = alleleCombo + letter.toLowerCase();
+        if (chromosomeAlleleCode(oddsOfRecessiveGeneDefault) < 6) {
+            alleleCombo = alleleCombo + chromosomeGenerateAlleleLetter(number).toLowerCase();
         } else {
-            alleleCombo = alleleCombo + letter;
+            alleleCombo = alleleCombo + chromosomeGenerateAlleleLetter(number);
         }
-        //System.out.println(alleleCombo);
 
         return alleleCombo;
     }
@@ -99,7 +90,7 @@ public class SexChromosome {
     }
 
     // Accessor Methods listed by return type
-    public int getChromosomeNumberOfGenes() { return this.chromosomeNumberOfGenes; }
+    public int getChromosomeNumberOfGenes() { return this.chromosomeAlleles.length; }
 
     public String[] getChromosomeAlleles() {
         return this.chromosomeAlleles;
@@ -133,12 +124,12 @@ public class SexChromosome {
             for (int j = 0; j < 12; j++) {
                 alleles[j] = "MM";
             }
-            SexChromosome test2 = new SexChromosome(12, alleles);
-            System.out.println(test2.getChromosomeAllelesString());
         }
+        SexChromosome test2 = new SexChromosome(alleles);
+        System.out.println(test2.getChromosomeAllelesString());
         System.out.println();
         alleles[0] = "XX";
-        SexChromosome test3 = new SexChromosome(12,alleles);
+        SexChromosome test3 = new SexChromosome(alleles);
         System.out.println(test3.getChromosomeAllelesString());
     }*/
 }

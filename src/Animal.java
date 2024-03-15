@@ -5,8 +5,6 @@ import java.util.Arrays;
 public class Animal {
     // Attributes of Animal
     private boolean animalBreed;
-    private int animalNumberOfChromosomes;
-    private int[] animalNumberOfGenes;
     private String animalNameOfAnimal;
     private String[][] animalGeneAlleles;
 
@@ -18,15 +16,11 @@ public class Animal {
         }
         String[][] animalGeneAlleleComplete = new String[chromosomeNumber][];
         for (int i = 0; i < chromosomeNumber-1; i++) {
-            int index = geneNumber[i];
-            Chromosome chromo = new Chromosome(index);
+            Chromosome chromo = new Chromosome(geneNumber[i]);
             animalGeneAlleleComplete[i] = chromo.getChromosomeAlleles();
         }
-        int gene = geneNumber[chromosomeNumber-1];
-        SexChromosome sex = new SexChromosome(gene);
+        SexChromosome sex = new SexChromosome(geneNumber[chromosomeNumber-1]);
         animalGeneAlleleComplete[chromosomeNumber-1] = sex.getChromosomeAlleles();
-        this.animalNumberOfChromosomes = chromosomeNumber;
-        this.animalNumberOfGenes = geneNumber;
         this.animalNameOfAnimal = animal;
         this.animalGeneAlleles = animalGeneAlleleComplete;
         this.animalBreed = false;
@@ -38,15 +32,11 @@ public class Animal {
         }
         String[][] animalGeneAlleleComplete = new String[chromosomeNumber][];
         for (int i = 0; i < chromosomeNumber-1; i++) {
-            int index = geneNumber[i];
-            Chromosome chromo = new Chromosome(index);
+            Chromosome chromo = new Chromosome(geneNumber[i]);
             animalGeneAlleleComplete[i] = chromo.getChromosomeAlleles();
         }
-        int gene = geneNumber[chromosomeNumber-1];
-        SexChromosome sexChromo = new SexChromosome(gene, sex);
+        SexChromosome sexChromo = new SexChromosome(geneNumber[chromosomeNumber-1], sex);
         animalGeneAlleleComplete[chromosomeNumber-1] = sexChromo.getChromosomeAlleles();
-        this.animalNumberOfChromosomes = chromosomeNumber;
-        this.animalNumberOfGenes = geneNumber;
         this.animalNameOfAnimal = animal;
         this.animalGeneAlleles = animalGeneAlleleComplete;
         this.animalBreed = false;
@@ -55,41 +45,15 @@ public class Animal {
     // generating an animal with specific genes
     public Animal(int chromosomeNumber,int[] geneNumber, String animal, String[][] chromosomeGene) {
         if (chromosomeGene[chromosomeNumber-1][0].equals("XY")|| chromosomeGene[chromosomeNumber-1][0].equals("XX")) {
-            this.animalNumberOfChromosomes = chromosomeNumber;
-            this.animalNumberOfGenes = geneNumber;
             this.animalNameOfAnimal = animal;
             this.animalGeneAlleles = chromosomeGene;
             this.animalBreed = true;
         } else {
             System.out.println("Invalid, error in code");
-            /*int[] gene = geneNumber.clone();
-            geneNumber[chromosomeNumber-1] = geneNumber[chromosomeNumber-1] + 1; //updates geneNumber
+            //need to replace the "sex" chromosome with the same chromosome alleles moved over by one and XX or XY placed in [0]
 
-            SexChromosome sex = new SexChromosome(1); //get sex Alleles
-            String sexAllele = sex.getChromosomeAllelesStringSINGLE();
-
-            String[][] clone = new String[chromosomeNumber][];
-            for (int i = 0; i < chromosomeNumber; i++) {
-                clone[i] = new String[geneNumber[i]];
-            }
-
-            for (int i = 0; i < chromosomeNumber; i++) { //copy into clone
-                for (int j = 0; j < gene[i]; j++) {
-                    clone[i][j] = chromosomeGene[i][j];
-                }
-            }
-
-            for (int i = geneNumber[chromosomeNumber-1]-1; i > 0; i--) {
-                clone[chromosomeNumber-1][i] = clone[chromosomeNumber-1][i-1];
-            }
-            clone[chromosomeNumber-1][0] = sexAllele;*/
-
-
-            this.animalNumberOfChromosomes = chromosomeNumber;
-            this.animalNumberOfGenes = geneNumber;
             this.animalNameOfAnimal = animal;
             this.animalGeneAlleles = chromosomeGene;
-            //this.animalGeneAlleles = clone;
             this.animalBreed = true;
         }
 
@@ -97,7 +61,7 @@ public class Animal {
 
     // Accessor Methods listed by return type
     public boolean getAnimalBreed() { return this.animalBreed; }
-    public int getAnimalNumberOfChromosomes() { return this.animalNumberOfChromosomes; }
+    public int getAnimalNumberOfChromosomes() { return this.animalGeneAlleles.length; }
 
     public int getAnimalGeneNumber(int i) {
         return this.animalGeneAlleles[i].length;
@@ -109,7 +73,13 @@ public class Animal {
         return this.animalGeneAlleles[i][j];
     }
 
-    public int[] getAnimalNumberOfGenes() { return this.animalNumberOfGenes; }
+    public int[] getAnimalNumberOfGenes() { //check this----------------------------------------------------------------
+        int[] number = new int[this.animalGeneAlleles.length];
+        for (int i = 0; i < this.animalGeneAlleles.length; i++) {
+            number[i] = this.animalGeneAlleles[i].length;
+        }
+        return number;
+    }
 
     public String[][] getAnimalGeneAlleles() { return this.animalGeneAlleles; }
 
@@ -118,7 +88,7 @@ public class Animal {
         String alleles = "";
         for (int i = 0; i < this.animalGeneAlleles.length; i++) {
             for (int j = 0; j < this.animalGeneAlleles[i].length; j++) {
-                alleles = alleles + /*Integer.toString(i) + Integer.toString(j) +*/ this.animalGeneAlleles[i][j] + " "; //----------------------------------
+                alleles = alleles + this.animalGeneAlleles[i][j] + " ";
             }
             alleles = alleles + "\n";
         }
@@ -142,7 +112,7 @@ public class Animal {
         //System.out.println(test.getAnimalGeneNumber(1));
         System.out.println("------");
 
-        int[]a = new int[6];
+        int[] a = new int[6];
         a[0] = 3;
         a[1] = 2;
         a[2] = 4;
