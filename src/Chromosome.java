@@ -65,7 +65,7 @@ public class Chromosome {
         return this.chromosomeAlleles;
     }
 
-    // Accessor Method returning strings from non-string objects
+    // Accessor Methods returning strings from non-string objects
     public String getChromosomeAllelesString() {
         String alleles = "";
         for (int j = 0; j < this.chromosomeAlleles.length; j++) {
@@ -74,7 +74,15 @@ public class Chromosome {
         return alleles;
     }
 
-    public static void main(String[] args) {
+    public String getChromosomeAllelesStringSINGLE() {
+        String alleles = "";
+        for (int j = 0; j < this.chromosomeAlleles.length; j++) {
+            alleles = this.chromosomeAlleles[j];
+        }
+        return alleles;
+    }
+
+    /*public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             Chromosome test = new Chromosome(7);
             System.out.println(test.getChromosomeAllelesString());
@@ -86,5 +94,5 @@ public class Chromosome {
 
         Chromosome test2 = new Chromosome(alleles);
         System.out.println(test2.getChromosomeAllelesString());
-    }
+    }*/
 }
