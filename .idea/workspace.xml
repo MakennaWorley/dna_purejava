@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome">
+    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mitosis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mitosis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SexChromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SexChromosome.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MakennaWorley"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f5b032d2-b910-4207-b224-760040bdfa1f" />
+        <option name="url" value="https://github.com/MakennaWorley/dna_purejava.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -97,7 +114,7 @@
       <workItem from="1710107079114" duration="238000" />
       <workItem from="1710346811148" duration="50000" />
       <workItem from="1710362540456" duration="79000" />
-      <workItem from="1710522220282" duration="1815000" />
+      <workItem from="1710522220282" duration="2426000" />
     </task>
     <task id="LOCAL-00001" summary="Fertilization works, does not check sex of parents">
       <option name="closed" value="true" />
@@ -139,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710523378020</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested">
+      <option name="closed" value="true" />
+      <created>1710524106234</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710524106234</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +176,8 @@
     <MESSAGE value="New methods for assigning sex for SexChromosome and Animal" />
     <MESSAGE value="Reduced number of new variables created in Chromosome" />
     <MESSAGE value="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome" />
+    <MESSAGE value="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

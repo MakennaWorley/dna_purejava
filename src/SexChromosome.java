@@ -113,7 +113,7 @@ public class SexChromosome {
         return alleles;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             SexChromosome test = new SexChromosome(4);
             System.out.println(test.getChromosomeAllelesString());
@@ -131,5 +131,5 @@ public class SexChromosome {
         alleles[0] = "XX";
         SexChromosome test3 = new SexChromosome(alleles);
         System.out.println(test3.getChromosomeAllelesString());
-    }
+    }*/
 }

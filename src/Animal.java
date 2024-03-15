@@ -100,7 +100,7 @@ public class Animal {
         return this.animalGeneAlleles[i-1][0];
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         int number = 6;
         int[] array = new int[number];
         for (int i = 0; i < number; i++) {
@@ -131,5 +131,5 @@ public class Animal {
         System.out.println(t.getAnimalSex());
         System.out.println(t.getAnimalBreed());
         System.out.println("------");
-    }
+    }*/
 }
