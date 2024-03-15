@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested">
+    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Reduced number of new variables created in Mitosis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mitosis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mitosis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SexChromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SexChromosome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Breed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Breed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fertilization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fertilization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,7 @@
       <workItem from="1710107079114" duration="238000" />
       <workItem from="1710346811148" duration="50000" />
       <workItem from="1710362540456" duration="79000" />
-      <workItem from="1710522220282" duration="2426000" />
+      <workItem from="1710522220282" duration="2741000" />
     </task>
     <task id="LOCAL-00001" summary="Fertilization works, does not check sex of parents">
       <option name="closed" value="true" />
@@ -164,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710524106234</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Reduced number of new variables created in Mitosis">
+      <option name="closed" value="true" />
+      <created>1710524665837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710524665837</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +184,8 @@
     <MESSAGE value="Reduced number of new variables created in Chromosome" />
     <MESSAGE value="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome" />
     <MESSAGE value="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested" />
+    <MESSAGE value="Reduced number of new variables created in Mitosis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduced number of new variables created in Mitosis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

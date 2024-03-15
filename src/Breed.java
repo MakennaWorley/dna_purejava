@@ -7,8 +7,6 @@ public class Breed {
     private Animal mother;
     private Animal father;
     private int breedOffspringNumber;
-    //private int breedParentRelationship;
-    //private double breedChanceOfMutation;
 
     // Constructor
     public Breed(Animal mother, Animal father, int number) {
@@ -16,8 +14,6 @@ public class Breed {
             this.mother = mother;
             this.father = father;
             this.breedOffspringNumber = number;
-            //this.breedParentRelationship = calculateBreedParentRelatioship();
-            //this.breedChanceOfMutation = calculateBreedMutationChance();
         }
     }
 
@@ -32,7 +28,7 @@ public class Breed {
         return offspring;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         int number = 4;
         int[] array = new int[number];
         for (int i = 0; i < number; i++) {
@@ -64,6 +60,6 @@ public class Breed {
         for (int i = 0; i < offspring.length; i++) {
             System.out.println(offspring[i].getAnimalChromosomeGeneAllelesString());
         }
-    }
+    }*/
 
 }

@@ -8,11 +8,7 @@ public class Fertilization {
 
     // Constructor
     public Fertilization(Animal parent, Mitosis parent1, Mitosis parent2) {
-        int chromosomeNumber = parent.getAnimalNumberOfChromosomes();
-        int[] geneNumber = parent.getAnimalNumberOfGenes();
-        String animalSpecies = parent.getAnimalName();
-        String[][] alleles = createChromosomes(parent1, parent2);
-        this.fertilizationAllelesPassed = alleles;
+        this.fertilizationAllelesPassed = createChromosomes(parent1, parent2);;
     }
 
     // Helper Methods for the Constructor
