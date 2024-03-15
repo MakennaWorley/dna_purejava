@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Reduced number of new variables created in Chromosome">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SexChromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SexChromosome.java" afterDir="false" />
+    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome">
+      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +97,7 @@
       <workItem from="1710107079114" duration="238000" />
       <workItem from="1710346811148" duration="50000" />
       <workItem from="1710362540456" duration="79000" />
-      <workItem from="1710522220282" duration="1043000" />
+      <workItem from="1710522220282" duration="1815000" />
     </task>
     <task id="LOCAL-00001" summary="Fertilization works, does not check sex of parents">
       <option name="closed" value="true" />
@@ -133,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710522919021</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome">
+      <option name="closed" value="true" />
+      <created>1710523378020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710523378020</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +150,8 @@
     <MESSAGE value="Updated Comments on Code and started work on Breed.java" />
     <MESSAGE value="New methods for assigning sex for SexChromosome and Animal" />
     <MESSAGE value="Reduced number of new variables created in Chromosome" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduced number of new variables created in Chromosome" />
+    <MESSAGE value="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduced number of new variables created in SexChromosome. Added getChromosomeAllelesStringSINGLE to Chromosome" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
