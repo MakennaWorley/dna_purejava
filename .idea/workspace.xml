@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Reduced number of new variables created in Breed and Fertilization">
-      <change afterPath="$PROJECT_DIR$/jars/mysql-connector-j-8.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/databaseconnection.java" afterDir="false" />
+    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Can connect to the MAMP Database">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chromosome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SexChromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SexChromosome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databaseconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseConnectionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +69,8 @@
     "Application.databaseconnection.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Database-Integration",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/makennaworley/Library/CloudStorage/OneDrive-Personal/Documents/dna",
     "node.js.detected.package.eslint": "true",
@@ -121,7 +125,8 @@
       <workItem from="1710362540456" duration="79000" />
       <workItem from="1710522220282" duration="2983000" />
       <workItem from="1712599008857" duration="756000" />
-      <workItem from="1712777693855" duration="752000" />
+      <workItem from="1712777693855" duration="1461000" />
+      <workItem from="1712787882747" duration="3297000" />
     </task>
     <task id="LOCAL-00001" summary="Fertilization works, does not check sex of parents">
       <option name="closed" value="true" />
@@ -187,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710525004869</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Can connect to the MAMP Database">
+      <option name="closed" value="true" />
+      <created>1712778550268</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712778550268</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +215,8 @@
     <MESSAGE value="Reduced number of new variables created in Animal. getAnimalNumberOfGenes needs to be tested" />
     <MESSAGE value="Reduced number of new variables created in Mitosis" />
     <MESSAGE value="Reduced number of new variables created in Breed and Fertilization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduced number of new variables created in Breed and Fertilization" />
+    <MESSAGE value="Can connect to the MAMP Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can connect to the MAMP Database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

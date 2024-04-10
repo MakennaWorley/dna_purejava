@@ -1,9 +1,14 @@
 //This code creates a Sex Chromosome
 import java.util.Random;
+import java.sql.PreparedStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.ResultSet;
 
 public class SexChromosome {
     // Attributes of Sex Chromosome
     private String[] chromosomeAlleles;
+    private int chromosomePK;
 
     private int oddsOfRecessiveGeneDefault = 50; //must be atleast 6 to work
 
@@ -16,6 +21,9 @@ public class SexChromosome {
             chromosomeBank[i] = chromosomeRandomizeAlleles(i);
         }
         this.chromosomeAlleles = chromosomeBank;
+
+        String s = chromosomeArrayString(chromosomeBank);
+        this.chromosomePK = chromosomeToDatabase(chromosomeBank);
     }
 
     // generating a sex chromosome with specific sex
@@ -30,15 +38,24 @@ public class SexChromosome {
             alleles[i] = chromosomeRandomizeAlleles(i);
         }
         this.chromosomeAlleles = alleles;
+
+        String s = chromosomeArrayString(alleles);
+        this.chromosomePK = chromosomeToDatabase(alleles);
     }
 
     // generating a sex chromosome with specific genes
     public SexChromosome(String[] alleles) {
         if (alleles[0].equals("XY") || alleles[0].equals("XX")) {
+            String s = chromosomeArrayString(alleles);
+            this.chromosomePK = chromosomeToDatabase(alleles);
+
             this.chromosomeAlleles = alleles;
         } else {
             System.out.println("Invalid, error in code");
             alleles[0] = chromosomeRandomizeSex();
+
+            String s = chromosomeArrayString(alleles);
+            this.chromosomePK = chromosomeToDatabase(alleles);
             this.chromosomeAlleles = alleles;
         }
     }
@@ -60,6 +77,18 @@ public class SexChromosome {
         }
 
         return alleleCombo;
+    }
+
+    private String chromosomeArrayString(String[] alleles) {
+        String s = "";
+        for (int j = 0; j < alleles.length; j++) {
+            if (j == alleles.length-1) {
+                s = s + alleles[j];
+            } else {
+                s = s + alleles[j] + " ";
+            }
+        }
+        return s;
     }
 
     // calculates the chance of getting a random recessive gene
@@ -100,7 +129,11 @@ public class SexChromosome {
     public String getChromosomeAllelesString() {
         String alleles = "";
         for (int j = 0; j < this.chromosomeAlleles.length; j++) {
-            alleles = alleles + this.chromosomeAlleles[j] + " ";
+            if (j == this.chromosomeAlleles.length-1) {
+                alleles = alleles + this.chromosomeAlleles[j];
+            } else {
+                alleles = alleles + this.chromosomeAlleles[j] + " ";
+            }
         }
         return alleles;
     }
@@ -111,6 +144,28 @@ public class SexChromosome {
             alleles = this.chromosomeAlleles[j];
         }
         return alleles;
+    }
+
+    // Database Methods
+    private int chromosomeToDatabase(String[] alleles) {
+        String s = chromosomeArrayString(alleles);
+        String sql = "INSERT INTO Chromosome(chromosomeGenes) VALUES(?);";
+
+        try (Connection c = DatabaseConnection.getConnection();
+             PreparedStatement t = c.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+            t.setString(1, s);
+            t.execute();
+            try (ResultSet generatedKeys = t.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    return generatedKeys.getInt(1);
+                }
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            System.out.println("Insert operation failed.");
+            e.printStackTrace();
+        }
+
+        return -1;
     }
 
     /*public static void main(String[] args) {
