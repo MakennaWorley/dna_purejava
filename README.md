@@ -1,9 +1,13 @@
-This is a side project that I decided would be a fun project to code
+This is a side project that I decided would be a fun project to code because I'm not busy enough.
 
-Inspired by Snake Discovery's videos about snake breeding (particularly hognose snakes). And because I thought this could possibly be my capstone for both Math and CS.
+As someone interested in genetics and enjoyed those dragon-breeding games in my youth. And still play Pokemon... I started on this project during the code freeze in my CMPT 322 class. Most of the genetics done in this is based on my notes from my AP Biology class I took and some Snake Discovery videos on snake genetics. I'm not a Biologist and Professor Youtube doesn't assign/grade any assignments, so I'm trying my best. But please, if anything is wrong, message/comment on this!
 
-This respository is just the pure java, so nothing fancy here. If you want to test this out, you need to manually create and breed the animals using the main method. I am hopefully going to fork this code (once working) into a new repository for the actual app but that is for a future Makenna to do so no promises.
+As for why Java? I honestly don't know, I think it was because my CMPT 322 class project is in Python and I do some web development in PHP, I was missing Java. Not like it was going to be much easier in a different language with all the loose strings I keep adding. Moving forward, as of writing this, I think I'm going to stay with Java since it's working with the database integration and I have stuff to work on. But I really want to add a statistical analysis to this code, so this might transition to Python because of libraries, I'm pretty sure I'm not going to do this in R.
 
-This is supposed to be realistic to the best of my ability as someone who's experience in biology is up the AP Bio. So not much, please be kind if it is not fully realistic. Comment for any changes.
+So what will this project look like/do? I want this project to be hosted on a server as a website free to use. When I was taking my AP Bio class, we used a pretty janky website for the genetics lab and I think I can do much better. So eventually, I want this to have a frontend (hopefully in React if I get to it) with a java/python backend and a MySQL server. In theory, students should be able to get a random generation of x animals and breed them (using a seed to make things easier to trace what the student actually did) to get specific traits and see how genetics allows individuals to carry and express genes. In the beginning, it's probably going to just be a bunch of buttons with the Phenotype of the animal but I'd love to get little images on the buttons too.
+
+But that's in the future, right now I'm working on the database integration (the fun stuff). Once that's all done, I need to add in the mutation chance (based on the parent's relationship hence why I needed the database). Then I will mark that commit as version 0.1 and begin work on the frontend. At the moment, I know barely any React so it will be in js for now and then React will be added as I learn it. And much, much later down the line, I might do the statistical part but that's like 6 months out. But that's a rough roadmap, keep in mind that I work on this during my free time so I have periods of no work being done.
+
+My hope is that I can take what I learned from this project and hopefully use it in my career and my senior capstones (hence the statistical analysis part).
 
 This project is: UNFINISHED
