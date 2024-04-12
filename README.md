@@ -7,3 +7,5 @@ This respository is just the pure java, so nothing fancy here. If you want to te
 This is supposed to be realistic to the best of my ability as someone who's experience in biology is up the AP Bio. So not much, please be kind if it is not fully realistic. Comment for any changes.
 
 This project is: UNFINISHED
+
+Link to my google doc for more information on the code and what I'm working on: https://docs.google.com/document/d/1SKawS-_nHgsTGrT-CPb33yd13McckCdd6rBejnYwLJg/edit?usp=sharing

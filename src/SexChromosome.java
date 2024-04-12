@@ -121,6 +121,10 @@ public class SexChromosome {
     // Accessor Methods listed by return type
     public int getChromosomeNumberOfGenes() { return this.chromosomeAlleles.length; }
 
+    public int getChromosomePK() { return this.chromosomePK; }
+
+    public String getSexChromosomeSex() { return this.chromosomeAlleles[0]; }
+
     public String[] getChromosomeAlleles() {
         return this.chromosomeAlleles;
     }

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Can connect to the MAMP Database">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseConnection.java" afterDir="false" />
+    <list default="true" id="b39795c9-0660-489b-886d-323f02536bf8" name="Changes" comment="Chromosome and SexChromosome now send data to the database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chromosome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SexChromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SexChromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/databaseconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseConnectionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,38 +56,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Animal.executor": "Run",
-    "Application.Breed.executor": "Run",
-    "Application.Chromosome.executor": "Run",
-    "Application.Fertilization.executor": "Run",
-    "Application.Mitosis.executor": "Run",
-    "Application.SexChromosome.executor": "Run",
-    "Application.databaseconnection.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Database-Integration",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/makennaworley/Library/CloudStorage/OneDrive-Personal/Documents/dna",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/janiceworley/Library/CloudStorage/OneDrive-Personal/Documents/dna/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Animal.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Breed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Chromosome.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Fertilization.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Mitosis.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SexChromosome.executor&quot;: &quot;Run&quot;,
+    &quot;Application.databaseconnection.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Database-Integration&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/makennaworley/Library/CloudStorage/OneDrive-Personal/Documents/dna&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/janiceworley/Library/CloudStorage/OneDrive-Personal/Documents/dna/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/jars" />
@@ -126,7 +124,8 @@
       <workItem from="1710522220282" duration="2983000" />
       <workItem from="1712599008857" duration="756000" />
       <workItem from="1712777693855" duration="1461000" />
-      <workItem from="1712787882747" duration="3297000" />
+      <workItem from="1712787882747" duration="3920000" />
+      <workItem from="1712942006920" duration="5059000" />
     </task>
     <task id="LOCAL-00001" summary="Fertilization works, does not check sex of parents">
       <option name="closed" value="true" />
@@ -200,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712778550268</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Chromosome and SexChromosome now send data to the database">
+      <option name="closed" value="true" />
+      <created>1712792968659</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712792968659</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +223,8 @@
     <MESSAGE value="Reduced number of new variables created in Mitosis" />
     <MESSAGE value="Reduced number of new variables created in Breed and Fertilization" />
     <MESSAGE value="Can connect to the MAMP Database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can connect to the MAMP Database" />
+    <MESSAGE value="Chromosome and SexChromosome now send data to the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chromosome and SexChromosome now send data to the database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
